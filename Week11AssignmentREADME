@@ -1,0 +1,22 @@
+Task 1
+Your first task consists in writing a depth method for the DTree class, returning the number of layers in the tree. The method that you write
+must use a method called TNode.subtree_depth , which you must also write. 
+
+2nd task: attach_tree 
+The second tasks consists in writing 2 methods. There should be a method of DTree called attach_tree that takes another DTree as its argument. 
+The purpose of this method is to take the other tree and attach it as a whole to one of its nodes. The other tree’s root should then be set to 
+None so that its contents get effectively transfered. The method then returns None . 
+
+3rd task: internal _find method 
+Write a method of the DTree class called _find . This method should take some data as argument and return a node that contains that data, if 
+present. Otherwise the call should result in a ValueError being raised. This method must use the subtree_find method, and deal correctly with 
+the empty tree case. 
+
+4th task: the in operator 
+Write a method that lets a user write x in t where t is a DTree and get a bool answer detecting if any of the nodes has x as its data . 
+The method must use the internal _find method, but obviously it should return False when the data is not present instead of raising an error.
+
+5th task:
+Write a method of the DTree class called cut_subtree that takes some data as argument. The purpose of this this method is to find a node with 
+the given data and cut it out of the tree, together with its own subtree. It must then return a new tree object using that subtree. It’s nearly 
+a counterpart of the attach_tree method, except that it cuts at a given location, instead of choosing automatically. 
